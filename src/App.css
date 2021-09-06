@@ -1,25 +1,45 @@
-.App {
-  text-align: center;
-}
+
 
 header {
-  background-color: gray;
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  top: 0px;
-  display: block;
-  z-index: 1000000;
+  
 }
 
-main {
+
+
+.card-container {
   display: flex;
   flex-wrap: wrap;
-  position: absolute;
-  top: 60px;
-
+  justify-content: space-around;
 }
 
+.tarjeta {
+  flex-basis: 23%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border: solid black 2px;
+}
+
+.infoTarjeta{
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.navigation{
+  width: 15px;
+  margin-left: 90%;
+}
+
+
+.fotosCont{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 70%;
+}
+
+.foto {
+  width: 100%;
+}
 
 footer {
   background-color: gray;
@@ -40,7 +60,5 @@ footer {
 
 .nombre {
   margin-left: 40px;
-  list-style: none;
-  
-  
+  list-style: none; 
 }

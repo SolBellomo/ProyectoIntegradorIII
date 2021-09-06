@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import "./Main.css"
 import Article from './Article/Article'
+
 
 class Main extends Component {
     constructor(props){
@@ -9,8 +11,11 @@ class Main extends Component {
     render(){
       return(
         <main>
-            <button type="button">Cargar más tarjetas</button>
+
+            <button className="cargarMas" type="button">Cargar más tarjetas</button>
+            
             <section class="card-container">
+                <Article />
                 <Article />
                 <Article />
                 <Article />

@@ -6,12 +6,6 @@ class Article extends Component {
       super(props);
       this.state = { valor: ""};
     }
-
-
-
-       
-        
-
     render(){
       return(
           
@@ -19,23 +13,18 @@ class Article extends Component {
             <section class="navigation">
                 <i classname="delete" class="far fa-window-close"></i>
             </section>
-            <main className="infoTarjeta">
-                <div className="fotosCont">
-
-                <img src alt="" className="foto" />
-
-                </div>
+               <main className="infoTarjeta">
+                    <div className="fotosCont">
+                        <img src="/img/image-default.png" alt="" className="foto" />
+                        <img src alt="" className="foto" />
+                    </div>
                <main/>
-                
                 <h3>titulo</h3>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <section class="aditional-info">
-               
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
                 </section>
                 <a href="">Ver más</a>
-                
             </main>
         </article>
     );

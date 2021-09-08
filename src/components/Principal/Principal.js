@@ -19,9 +19,7 @@ class Principal extends Component {
               .then((data) =>{
                   console.log(data);
                   this.setState ({
-                      
                       peliculas:data.results,
-                      
                   });
               })
               .catch( err => console.log(err))
@@ -30,7 +28,6 @@ class Principal extends Component {
     render(){
       return(
         <main>
-
             <button className="cargarMas" type="button">Cargar más tarjetas</button>
             <div class="card-container">
               {this.state.peliculas.map((pelicula =>(
@@ -40,15 +37,6 @@ class Principal extends Component {
               )
           ))}
             </div>
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-                <Article />
-            
         </main>
     );
     }

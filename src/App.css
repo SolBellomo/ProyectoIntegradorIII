@@ -1,3 +1,15 @@
+.App{
+  border: solid black 2px;  
+}
+
+header{
+  border: solid black 2px;
+}
+
+.Titulo{
+  font-size: larger;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -21,14 +33,12 @@
   margin-left: 90%;
 }
 
-
 .fotosCont{
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
   width: 70%;
 }
-
 .foto {
   width: 100%;
 }
@@ -47,7 +57,6 @@ footer {
   flex-wrap: wrap;
   padding: 0px;
   margin-top: 10px;
-  
 }
 
 .nombre {

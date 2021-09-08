@@ -16,7 +16,7 @@ class Header extends Component{
         return (
             <>   
                 <header>
-                    <h1>Título/ Nombre de la app</h1>
+                    <h1 className="Titulo">Título/ Nombre de la app</h1>
                     <section className="infoHeader">
                       
                              <p>Ordenar ASC/ DESC</p>

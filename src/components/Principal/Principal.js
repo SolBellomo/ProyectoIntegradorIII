@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import "./Principal.css"
-import Article from './Article/Article'
-
+import Article from './Article/Article';
 
 class Principal extends Component {
     constructor(){

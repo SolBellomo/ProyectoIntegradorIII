@@ -1,30 +1,32 @@
 import React, {Component} from 'react';
-import Principal from '../Principal';
 
 class Article extends Component {
     constructor(props){
       super(props);
-      this.state = { valor: ""};
+      this.state = {
+          viewMore: false,
+          text: "Ver más",
+        };
     }
     render(){
-      return(
-          
+        const{poster_path, original_title, overview, release_date, popularity} = this.props.datosPelicula;
+        return(
         <article className="tarjeta">
-            <section class="navigation">
-                <i classname="delete" class="far fa-window-close"></i>
+            <section className="navigation">
+                <i classname="delete" className="far fa-window-close"></i>
             </section>
                <main className="infoTarjeta">
                     <div className="fotosCont">
-                        <img src="/img/image-default.png" alt="" className="foto" />
-                        <img src alt="" className="foto" />
+                        <img src={'https:///image.tmdb.org/t/p/w500' + poster_path} alt={original_title} className="foto" />
                     </div>
+                    <h3>{original_title}</h3>
+                    <p className="description">{overview}</p>
+                    <section className="aditional-info">
+                        <h3>Release date: {release_date}</h3>
+                        <h3>Popularity: {popularity}</h3>
+                    </section>
+                    <a href="">Ver más</a>
                <main/>
-                <h3>titulo</h3>
-                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <section class="aditional-info">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                </section>
-                <a href="">Ver más</a>
             </main>
         </article>
     );

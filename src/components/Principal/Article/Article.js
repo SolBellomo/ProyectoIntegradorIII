@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
+import Principal from '../Principal';
 
-class Head extends Component {
+class Article extends Component {
     constructor(props){
       super(props);
-      this.state = {valor: ''};
+      this.state = { valor: ""};
     }
+
+
+
+       
+        
+
     render(){
       return(
+          
         <article className="tarjeta">
             <section class="navigation">
                 <i classname="delete" class="far fa-window-close"></i>
@@ -14,11 +22,12 @@ class Head extends Component {
             <main className="infoTarjeta">
                 <div className="fotosCont">
 
-                <img src="/img/image-default.png" alt="" className="foto" />
+                <img src alt="" className="foto" />
 
                 </div>
+               <main/>
                 
-                <h3>Título/ Nombre</h3>
+                <h3>titulo</h3>
                 <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <section class="aditional-info">
                
@@ -26,10 +35,11 @@ class Head extends Component {
                     
                 </section>
                 <a href="">Ver más</a>
+                
             </main>
         </article>
     );
     }
 }
 
-export default Head;
+export default Article;

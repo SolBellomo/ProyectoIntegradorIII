@@ -1,15 +1,18 @@
 .App{
-  border: solid black 2px;  
+  border: solid rgb(102, 102, 102) 2px;  
+  background-color: black;
 }
 
 header{
-  border: solid black 2px;
+  border: solid rgb(102, 102, 102) 2px;
 }
 
 .Titulo{
   font-size: larger;
 }
-
+h3, p, h1, i {
+  color: rgb(102, 102, 102);
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +23,7 @@ header{
   flex-basis: 23%;
   margin-top: 10px;
   margin-bottom: 30px;
-  border: solid black 2px;
+  border: solid rgb(102, 102, 102) 2px;
 }
 
 .infoTarjeta{

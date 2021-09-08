@@ -8,14 +8,15 @@ import FilterField from './components/FilterField';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <div className="App">
       <Head />
       <Header />
       <Principal />
       <FilterField />
       <Footer /> 
-      
-    </div>
+      </div>
+    </>
   );
 }
 

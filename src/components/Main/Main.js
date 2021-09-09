@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import "./Principal.css"
+import "./Main.css"
 import Article from './Article/Article';
 
-class Principal extends Component {
+class Main extends Component {
     constructor(){
       super();
       this.state = {
@@ -59,4 +59,4 @@ class Principal extends Component {
     }
 }
 
-export default Principal;
+export default Main;

@@ -10,6 +10,22 @@ class Article extends Component {
           text: "Ver más",
         };
     }
+
+
+    viewMore(){
+        if(this.state.viewMore){
+            this.setState({
+                viewMore: false,
+                text: 'Ver más'
+            })
+        } else {
+            this.setState({
+                viewMore: true,
+                text: 'ver menos'
+            })            
+        }
+    }
+
     render(){
         const{poster_path, original_title, overview, release_date, popularity} = this.props.datosPelicula;
         return(
@@ -23,11 +39,13 @@ class Article extends Component {
                     </div>
                     <h3>{original_title}</h3>
                     <p className="description">{overview}</p>
-                    <section className="aditional-info">
-                        <h3>Release date: {release_date}</h3>
-                        <h3>Popularity: {popularity}</h3>
+                    <section className="aditional-info"> 
+                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Release date: {release_date}</h3>
+                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Popularity: {popularity}</h3>
                     </section>
-                    <a href="">Ver más</a>
+                    
+                    <p className='more' onClick={()=>this.viewMore()}>{this.state.text}</p>
+
                <main/>
             </main>
         </article>

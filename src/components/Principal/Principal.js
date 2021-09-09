@@ -22,6 +22,12 @@ class Principal extends Component {
               })
               .catch( err => console.log(err))
           }
+    componentDidUpdate(){
+      console.log("component did update")
+    }
+
+
+          
     render(){
       return(
         <main>
@@ -34,6 +40,9 @@ class Principal extends Component {
               )
           ))}
             </div>
+
+            
+
         </main>
     );
     }

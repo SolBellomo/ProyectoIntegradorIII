@@ -38,8 +38,9 @@ class Article extends Component {
                         <img src={'https:///image.tmdb.org/t/p/w500' + poster_path} alt={original_title} className="foto" />
                     </div>
                     <h3>{original_title}</h3>
-                    <p className="description">{overview}</p>
+                    
                     <section className="aditional-info"> 
+                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>{overview}</h3>
                         <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Release date: {release_date}</h3>
                         <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Popularity: {popularity}</h3>
                     </section>

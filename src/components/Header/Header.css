@@ -7,8 +7,7 @@ header{
 .Titulo{
     font-size: larger;
     flex-basis: 30%;
-    justify-content: right;
-
+    padding-block: 1%;
 }
 
 .label{

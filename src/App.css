@@ -21,11 +21,11 @@ h3, p, h1, i {
 }
 
 .tarjeta {
-  flex-basis: 23%;
+  flex-basis: 19%;
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   border: solid rgb(102, 102, 102) 2px;
-  min-height: 485px;
+  min-height: 430px;
   border-radius: 5px;
 }
 .tarjeta:hover{

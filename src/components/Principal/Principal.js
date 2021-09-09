@@ -15,7 +15,7 @@ class Principal extends Component {
       fetch(url)
       .then( (respuesta) => respuesta.json())
               .then((data) =>{
-                  const limit = 8;
+                  const limit = 10;
 
                   console.log(data);
                   this.setState ({

@@ -13,24 +13,23 @@ class Header extends Component{
         this.serState({valor: event.target.value});
     }
     render(){
-        return (
-            <>   
+        return (  
                 <header>
                     <h1 className="Titulo">Movies</h1>
                     <section className="infoHeader">
-                      
-                             <p>Ordenar ASC/ DESC</p>
-                            <i className="fas fa-th"></i>
-                            <i className="fas fa-align-justify"></i>
+                            <p>Ordenar ASC/ DESC</p>
+                            <div className="iconos">
+                                <i className="fas fa-th"></i>
+                                <i className="fas fa-align-justify"></i>
+                            </div>
                             
                             <form onSubmit={(event) => this.evitarSubmit(event)}>
-                                <label>Name:    </label>
+                                <label className="label">Name:</label>
                                 <input type="text" onChange={(event)=>this.controlarCambios(event)} value={this.state.valor}/>
                             <button type="submit"><i className="fas fa-search" value="Submit"></i></button>
                             </form>
                     </section>
                 </header>
-            </>
         )
     }
 }

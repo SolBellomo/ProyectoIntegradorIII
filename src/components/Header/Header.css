@@ -1,12 +1,26 @@
 header{
     display: flex;
-   
+    width: 100%;
+    border: solid rgb(102, 102, 102) 2px;
+}
+
+.Titulo{
+    font-size: larger;
+    flex-basis: 30%;
+    justify-content: right;
+
+}
+
+.label{
+    display: none;
 }
 
 .infoHeader{
     width: 550px;
     display: flex;
-    justify-content: space-around;
-    padding-top: 25px;
-    margin-left: 40%;
+    flex-basis: 70%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5%; 
+    padding-block: 1%;
 }

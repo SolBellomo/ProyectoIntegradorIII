@@ -3,13 +3,6 @@
   background-color: black;
 }
 
-header{
-  border: solid rgb(102, 102, 102) 2px;
-}
-
-.Titulo{
-  font-size: larger;
-}
 h3, p, h1, i {
   color: rgb(102, 102, 102);
 }
@@ -19,8 +12,6 @@ h3, p, h1, i {
   justify-content: space-around;
   align-items: flex-start;
   margin-bottom: 40px;
-  margin-top: 40px;
- 
 }
 
 .tarjeta {

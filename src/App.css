@@ -19,7 +19,7 @@ h3, p, h1, i {
   margin-top: 10px;
   margin-bottom: 15px;
   border: solid rgb(102, 102, 102) 2px;
-  min-height: 460px;
+  min-height: 450px;
   border-radius: 5px;
 }
 .tarjeta:hover{
@@ -31,7 +31,9 @@ h3, p, h1, i {
   padding-left: 10px;
   padding-bottom: 5px;
 }
-
+.tituloTarjeta{
+  min-height: 40px;
+}
 .navigation{
   width: 15px;
   margin-left: 90%;

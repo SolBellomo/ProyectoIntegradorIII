@@ -37,7 +37,7 @@ class Article extends Component {
                     <div className="fotosCont">
                         <img src={'https:///image.tmdb.org/t/p/w500' + poster_path} alt={original_title} className="foto" />
                     </div>
-                    <h3>{original_title}</h3>
+                    <h3 className="tituloTarjeta">{original_title}</h3>
                     
                     <section className="aditional-info"> 
                         <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>{overview}</h3>

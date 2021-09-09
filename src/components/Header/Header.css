@@ -7,13 +7,18 @@ header{
 .Titulo{
     font-size: larger;
     flex-basis: 30%;
-    padding-block: 1%;
+    color: white;
+    font-size: 220%;
+    font-weight: 200;
+    margin-left: 2%;
 }
-
 .label{
     display: none;
 }
-
+.orden{
+    font-size: 25px;
+    padding-inline: 5px;
+}
 .infoHeader{
     width: 550px;
     display: flex;
@@ -22,4 +27,23 @@ header{
     justify-content: flex-end;
     margin-right: 5%; 
     padding-block: 1%;
+    border-inline: 50px;
+    font-size: 17px;
+}
+.icon{
+    border: none;
+    background: #232833;
+    height: 40px;
+    width: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.busqueda{
+    height: 40px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: #2b303b;
+    padding-left: 10px;
+    margin-left: 5px;
 }

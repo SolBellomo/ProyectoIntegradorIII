@@ -21,11 +21,13 @@ h3, p, h1, i {
   border: solid rgb(102, 102, 102) 2px;
   min-height: 450px;
   border-radius: 5px;
+  opacity: 50%;
 }
 .tarjeta:hover{
   border-color: rgb(255, 0, 0);
   background-color: rgba(19, 19, 19, 0.575);
   box-shadow: 0 0 8px rgb(255, 0, 0);
+  opacity: 100%;
 }
 .infoTarjeta{
   padding-left: 10px;

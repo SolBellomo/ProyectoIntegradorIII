@@ -18,6 +18,9 @@ h3, p, h1, i {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
+  margin-bottom: 40px;
+  margin-top: 40px;
+ 
 }
 
 .tarjeta {
@@ -25,7 +28,7 @@ h3, p, h1, i {
   margin-top: 10px;
   margin-bottom: 15px;
   border: solid rgb(102, 102, 102) 2px;
-  min-height: 430px;
+  min-height: 460px;
   border-radius: 5px;
 }
 .tarjeta:hover{

@@ -19,6 +19,7 @@ class Principal extends Component {
 
                   console.log(data);
                   this.setState ({
+                      cargarMas: limit + 10,
                       peliculas: data.results.slice(0, limit),
                   });
               })
@@ -27,11 +28,10 @@ class Principal extends Component {
     componentDidUpdate(){
       console.log("component did update")
     }
-
     render(){
       return(
         <main>
-            <button className="cargarMas" type="button">Cargar más tarjetas</button>
+            <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
             <div class="card-container">
               {this.state.peliculas.map((pelicula =>(
             <Article

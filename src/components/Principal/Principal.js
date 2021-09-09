@@ -15,19 +15,19 @@ class Principal extends Component {
       fetch(url)
       .then( (respuesta) => respuesta.json())
               .then((data) =>{
+                  const limit = 8;
+
                   console.log(data);
                   this.setState ({
-                      peliculas:data.results,
+                      peliculas: data.results.slice(0, limit),
                   });
               })
               .catch( err => console.log(err))
-          }
+        }
     componentDidUpdate(){
       console.log("component did update")
     }
 
-
-          
     render(){
       return(
         <main>

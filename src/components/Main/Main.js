@@ -41,7 +41,16 @@ class Main extends Component {
                 })
             })
             .catch( error => console.log(error))
-    }
+          }
+    borrarPelicula(id){
+        console.log(id);
+        const otras = this.state.pelicula.filter(
+        (pelicula) => pelicula.id != id);
+        this.setState({
+        pelicula: otras,
+              })
+            }
+
     render(){
       return(
         <main>
@@ -50,7 +59,8 @@ class Main extends Component {
               {this.state.peliculas.map((pelicula =>(
             <Article
             key={pelicula.id} 
-            datosPelicula={pelicula} />
+            datosPelicula={pelicula} 
+            borrar={ (peliculaBorrar) =>this.borrarPelicula(peliculaBorrar)}/>
               )
           ))}
             </div>

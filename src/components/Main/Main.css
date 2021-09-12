@@ -1,7 +1,10 @@
 .cargarMas{
-    margin-left: 90%;
-    margin-top: 20px;
-   
-  }
-
- 
+    margin-top: 10px;
+    background: #2b303b;
+    color: rgb(131, 131, 131);
+    height: 25px;
+    border-style: none;
+    border-radius: 5px;
+    min-width: 100px;
+    margin-left: 85.5%;
+}

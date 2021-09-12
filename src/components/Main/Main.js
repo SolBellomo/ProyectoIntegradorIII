@@ -7,6 +7,7 @@ class Main extends Component {
       super();
       this.state = {
         peliculas: [],
+        cargando: false,
     };
     }
     componentDidMount(){
@@ -20,6 +21,7 @@ class Main extends Component {
                   console.log(data);
                   this.setState ({
                       peliculas: data.results.slice(0, limit),
+                      cargando: true,
                   });
               })
               .catch( err => console.log(err))
@@ -54,15 +56,20 @@ class Main extends Component {
     render(){
       return(
         <main>
-            <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
+            <div className="button">
+                <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
+            </div>
             <div class="card-container">
-              {this.state.peliculas.map((pelicula =>(
-            <Article
-            key={pelicula.id} 
-            datosPelicula={pelicula} 
-            borrar={ (peliculaBorrar) =>this.borrarPelicula(peliculaBorrar)}/>
-              )
-          ))}
+              { 
+                this.state.cargando === false ?
+                  <img src="https://i.pinimg.com/originals/42/a8/d4/42a8d4625aeb088c45eba5a84ca36325.gif" alt="Cargando..." />:
+                this.state.peliculas.map((pelicula =>(
+                    <Article
+                    key={pelicula.id} 
+                    datosPelicula={pelicula} 
+                    borrar={ (peliculaBorrar) =>this.borrarPelicula(peliculaBorrar)}/> 
+                )))
+                }
             </div>
         </main>
     );

@@ -4,7 +4,6 @@ import Head from './components/Head/Head'
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-import FilterField from './components/FilterField';
 
 function App() {
   return (

@@ -1,17 +1,10 @@
 import React, {Component} from 'react';
+import Search from './Search/Search';
 import "./Header.css"
-import FilterField from '../FilterField';
 
 class Header extends Component{
     constructor(props){
         super(props);
-        this.state = {valor: ''};
-    }
-    evitarSubmit(event){
-        event.preventDefault();
-    }
-    controlarCambios(event){
-        this.serState({valor: event.target.value});
     }
     render(){
         return (  
@@ -23,16 +16,11 @@ class Header extends Component{
                                 <i className="fas fa-th orden"></i>
                                 <i className="fas fa-align-justify orden"></i>
                             </div>
-                            
-                            <form onSubmit={(event) => this.evitarSubmit(event)}>
-                                <input type="Search" className="busqueda" onChange={(event)=>this.controlarCambios(event)} value={this.state.valor} placeholder="Search..."/>
-                            <button type="submit" className="icon"><i className="fas fa-search search" value="Submit"></i></button>
-                            </form>
+                            <Search />
                     </section>
                 </header>
         )
     }
 }
-
 
 export default Header;

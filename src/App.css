@@ -1,6 +1,7 @@
 .App{
   border: solid rgb(102, 102, 102) 2px;  
   background-color: black;
+  padding: 7px;
 }
 
 h3, p, h1, i {
@@ -52,24 +53,32 @@ h3, p, h1, i {
 }
 
 footer {
-  background-color: gray;
+  background-color: rgba(12, 12, 12, 0.911);
   width: 100%;
-  height: 40px;
   position: fixed;
   bottom: 0px;
+  padding: 10px;
+  box-shadow: 0 0 1px rgb(194, 194, 194);
 }
 
 .nombres{
-  margin-left: 70%;
   display: flex;
   flex-wrap: wrap;
   padding: 0px;
   margin-top: 10px;
+  justify-content: flex-end;
+  margin-right: 2%;
 }
 
 .nombre {
-  margin-left: 40px;
   list-style: none; 
+  display: flex;
+  font-size: small;
+  margin-right: 10px;
+  letter-spacing: 0.6px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  color: rgba(128, 128, 128, 0.87);
 }
 
 label {

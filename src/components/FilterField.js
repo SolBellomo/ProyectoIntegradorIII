@@ -18,7 +18,7 @@ class FilterField extends Component {
       {
         filterBy: e.target.value,
       },
-      () => this.props.filtrarPersonajes(this.state.filterBy)
+      () => this.props.filtrarPeliculas(this.state.filterBy)
     );
   }
   render() {

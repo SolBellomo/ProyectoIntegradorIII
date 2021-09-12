@@ -13,7 +13,6 @@ function App() {
       <Head />
       <Header />
       <Main />
-      <FilterField />
       <Footer /> 
       </div>
     </>

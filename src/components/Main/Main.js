@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import "./Main.css"
 import Article from './Article/Article';
+import FilterField from '../FilterField';
 
 class Main extends Component {
     constructor(){
@@ -53,11 +54,21 @@ class Main extends Component {
               })
             }
 
+    filtrarPeliculas(textoFiltrar){
+      let PeliculasFiltradas = this.state.peliculas.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
+      console.log(PeliculasFiltradas);
+
+      this.setState({
+        peliculas: PeliculasFiltradas,
+      })
+    }        
+
     render(){
       return(
         <main>
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
+                < FilterField filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             </div>
             <div class="card-container">
               { 

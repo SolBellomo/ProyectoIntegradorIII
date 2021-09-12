@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Main from '../Main';
 import './Article.css'
 
 class Article extends Component {
@@ -10,8 +9,6 @@ class Article extends Component {
           text: "Ver más",
         };
     }
-
-
     viewMore(){
         if(this.state.viewMore){
             this.setState({

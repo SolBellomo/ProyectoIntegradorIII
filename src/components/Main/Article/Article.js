@@ -28,6 +28,14 @@ class Article extends Component {
 
     render(){
         const{poster_path, original_title, overview, release_date, popularity} = this.props.datosPelicula;
+        let contenido;
+
+        if (poster_path == "" ) {
+            contenido = <p> Cargando...</p>
+        } else {
+            contenido =  <img src={'https:///image.tmdb.org/t/p/w500' + poster_path} alt={original_title} className="foto" />
+        }
+
         return(
         <article className="tarjeta">
             <section className="navigation">
@@ -35,7 +43,7 @@ class Article extends Component {
             </section>
                <main className="infoTarjeta">
                     <div className="fotosCont">
-                        <img src={'https:///image.tmdb.org/t/p/w500' + poster_path} alt={original_title} className="foto" />
+                        {contenido}
                     </div>
                     <h3 className="tituloTarjeta">{original_title}</h3>
                     

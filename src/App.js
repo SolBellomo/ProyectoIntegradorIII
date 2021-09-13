@@ -22,14 +22,14 @@ class App extends Component {
   }*/
   render() {
     return (
-      <>
-        <div className="App">
+      <div className="App">
+        <React.Fragment >
           <Head />
           <Header /*filterField={this.state.filterField} filterTrigger={() => this.filterTrigger()}*//>
           <Main /*filterField={this.state.filterField}*//>
-        </div>
+        </React.Fragment>
         <Footer /> 
-      </>
+      </div>
     );
   }  
 }

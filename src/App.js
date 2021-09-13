@@ -22,14 +22,14 @@ class App extends Component {
   }*/
   render() {
     return (
-      <div>
+      <>
         <div className="App">
           <Head />
           <Header /*filterField={this.state.filterField} filterTrigger={() => this.filterTrigger()}*//>
           <Main /*filterField={this.state.filterField}*//>
         </div>
         <Footer /> 
-      </div>
+      </>
     );
   }  
 }

@@ -72,7 +72,7 @@ class Main extends Component {
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
                 < Search filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             </div>
-            <div class="card-container">
+            <div className="card-container">
               { 
                 this.state.cargando === false ?
                   <img src="https://i.pinimg.com/originals/42/a8/d4/42a8d4625aeb088c45eba5a84ca36325.gif" alt="Cargando..." />:

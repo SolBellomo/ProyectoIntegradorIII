@@ -16,8 +16,14 @@
 }
 
 .botonBorrar {
-    background: #2b303b;
+    background: none;
     border-style: none;
     height: 20px;
+    font-size: large;
+    margin-right: 20px;
+    margin-top: 5px;
 }
 
+.cruz{
+    color: rgba(114, 114, 114, 0.774);
+}

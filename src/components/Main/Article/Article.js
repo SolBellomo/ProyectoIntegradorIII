@@ -43,7 +43,7 @@ class Article extends Component {
         <article className="tarjeta">
             <section className="navigation">
                 {/* <i classname="delete" className="far fa-window-close"></i> */}
-                <button onClick={()=> this.props.borrar(id)}> <i classname="delete" className="far fa-window-close"></i> </button>
+                <button onClick={()=> this.props.borrar(id)} className="botonBorrar"> <i classname="delete" className="far fa-window-close"></i> </button>
                 
             </section>
                <main className="infoTarjeta">

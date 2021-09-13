@@ -15,7 +15,7 @@ h3, p, h1, i {
 }
 
 .tarjeta {
-  flex-basis: 19%;
+  flex-basis: 18.9%;
   margin-top: 10px;
   margin-right: 5px;
   margin-left: 5px;
@@ -23,7 +23,6 @@ h3, p, h1, i {
   border: solid rgb(102, 102, 102) 2px;
   min-height: 450px;
   border-radius: 5px;
- 
 }
 .tarjeta:hover{
   border-color: rgb(255, 0, 0);

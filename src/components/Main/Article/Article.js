@@ -7,6 +7,7 @@ class Article extends Component {
       this.state = {
           viewMore: false,
           text: "Ver más",
+          peliculas: [],
         };
     }
 
@@ -25,14 +26,25 @@ class Article extends Component {
         }
     }
 
+    /* borrarPelicula(id){
+        console.log(id);
+        const otras = this.state.pelicula.filter(
+        (pelicula) => pelicula.id != id);
+        this.setState({
+        pelicula: otras,
+              })
+            }
+ */
     render(){
-        const{poster_path, original_title, overview, release_date, popularity} = this.props.datosPelicula;
+        const{poster_path, original_title, overview, release_date, popularity, id} = this.props.datosPelicula;
 
     
         return(
         <article className="tarjeta">
             <section className="navigation">
-                <i classname="delete" className="far fa-window-close"></i>
+                {/* <i classname="delete" className="far fa-window-close"></i> */}
+                <button onClick={()=> this.props.borrar(id)}> <i classname="delete" className="far fa-window-close"></i> </button>
+                
             </section>
                <main className="infoTarjeta">
                     <div className="fotosCont">

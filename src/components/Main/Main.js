@@ -45,14 +45,14 @@ class Main extends Component {
             })
             .catch( error => console.log(error))
           }
-    borrarPelicula(id){
+     borrarPelicula(id){
         console.log(id);
-        const otras = this.state.pelicula.filter(
-        (pelicula) => pelicula.id != id);
+        const otras = this.state.peliculas.filter(
+        (pelicula) => pelicula.id !== id);
         this.setState({
-        pelicula: otras,
-              })
-            }
+        peliculas: otras,
+              }) 
+            } 
 
     filtrarPeliculas(textoFiltrar){
       let PeliculasFiltradas = this.state.peliculas.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));

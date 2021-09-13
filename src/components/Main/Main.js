@@ -7,6 +7,7 @@ class Main extends Component {
     constructor(){
       super();
       this.state = {
+        originales: [],
         peliculas: [],
         cargando: false,
     };
@@ -21,6 +22,7 @@ class Main extends Component {
 
                   console.log(data);
                   this.setState ({
+                      originales: data.results.slice(0, limit),
                       peliculas: data.results.slice(0, limit),
                       cargando: true,
                   });
@@ -55,7 +57,7 @@ class Main extends Component {
             } 
 
     filtrarPeliculas(textoFiltrar){
-      let PeliculasFiltradas = this.state.peliculas.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
+      let PeliculasFiltradas = this.state.originales.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
       console.log(PeliculasFiltradas);
 
       this.setState({

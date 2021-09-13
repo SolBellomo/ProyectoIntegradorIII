@@ -11,15 +11,14 @@ h3, p, h1, i {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  align-items: flex-start;
   margin-bottom: 40px;
 }
 
 .tarjeta {
   flex-basis: 19%;
   margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 1px;
+  margin-right: 5px;
+  margin-left: 5px;
   margin-bottom: 15px;
   border: solid rgb(102, 102, 102) 2px;
   min-height: 450px;

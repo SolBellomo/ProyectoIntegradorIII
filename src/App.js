@@ -23,12 +23,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <React.Fragment >
           <Head />
           <Header />
           <Main />
-        </React.Fragment>
-        <Footer /> 
+         <Footer /> 
       </div>
     );
   }  

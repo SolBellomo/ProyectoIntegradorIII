@@ -11,7 +11,7 @@ class Header extends Component{
                 <header>
                     <h1 className="Titulo">MOVIES</h1>
                     <section className="infoHeader">
-                            <p>Ordenar ASC/ DESC</p>
+                           
                             <div className="iconos">
                                 <i className="fas fa-th orden" onClick="nuevaClase(this)" value="Create"></i>
                                 <i className="fas fa-align-justify orden"></i>

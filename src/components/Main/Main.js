@@ -64,7 +64,7 @@ class Main extends Component {
     } 
 
     filtrarPeliculas(textoFiltrar){
-      let PeliculasFiltradas = this.state.originales.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
+      let PeliculasFiltradas = this.state.peliculas.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
       console.log(PeliculasFiltradas);
 
       this.setState({

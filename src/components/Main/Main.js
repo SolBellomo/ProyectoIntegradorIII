@@ -10,11 +10,12 @@ class Main extends Component {
         originales: [],
         peliculas: [],
         cargando: false,
+        paginado: 1,
     };
     }
     componentDidMount(){
       console.log("component did mount");
-      const url= "https://api.themoviedb.org/3/movie/popular?api_key=10fd46606b7b4f788c4f94213141cfc9&language=en-US&page=1"
+      const url= `https://api.themoviedb.org/3/movie/popular?api_key=10fd46606b7b4f788c4f94213141cfc9&language=en-US&page=${this.state.paginado}`
       fetch(url)
       .then( (respuesta) => respuesta.json())
               .then((data) =>{
@@ -25,6 +26,7 @@ class Main extends Component {
                       originales: data.results.slice(0, limit),
                       peliculas: data.results.slice(0, limit),
                       cargando: true,
+                      paginado: this.state.paginado + 1,
                   });
               })
               .catch( err => console.log(err))
@@ -34,27 +36,32 @@ class Main extends Component {
       console.log("component did update")
     }
     cargarMas(){
-      const url = 'https://api.themoviedb.org/3/movie/popular?api_key=c6008cb55dc77f123f073cb070c2193b&language=en-US&page=' + this.state.agregar + 1; 
-
+      const url = `https://api.themoviedb.org/3/movie/popular?api_key=10fd46606b7b4f788c4f94213141cfc9&language=en-US&page=${this.state.paginado}`;
+        console.log(url)
         fetch(url)
             .then( response => response.json() )
             .then( data => {
                 console.log(data);
                 this.setState({
                     peliculas: this.state.peliculas.concat(data.results),
-                    agregar:data.page, 
+                    originales: this.state.originales.concat(data.results),
+                    paginado: this.state.paginado + 1,
                 })
             })
             .catch( error => console.log(error))
           }
-     borrarPelicula(id){
+    borrarPelicula(id){
         console.log(id);
         const otras = this.state.peliculas.filter(
         (pelicula) => pelicula.id !== id);
+        const otrasOriginales = this.state.originales.filter (
+          (pelicula) => pelicula.id !== id);
+
         this.setState({
-        peliculas: otras,
-              }) 
-            } 
+          peliculas: otras,
+          originales: otrasOriginales,
+        }) 
+    } 
 
     filtrarPeliculas(textoFiltrar){
       let PeliculasFiltradas = this.state.originales.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
@@ -72,8 +79,10 @@ class Main extends Component {
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
                 < Search filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             </div>
+            
             <div className="card-container">
-              { 
+            { this.state.peliculas.length && this.state.filtrarPeliculas === 0 ? 
+              <p>No se encuentran resultados</p>:
                 this.state.cargando === false ?
                   <img src="https://i.pinimg.com/originals/42/a8/d4/42a8d4625aeb088c45eba5a84ca36325.gif" alt="Cargando..." />:
                 this.state.peliculas.map((pelicula =>(

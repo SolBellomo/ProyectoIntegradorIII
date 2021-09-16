@@ -25,8 +25,8 @@ class App extends Component {
       <div className="App">
         <React.Fragment >
           <Head />
-          <Header /*filterField={this.state.filterField} filterTrigger={() => this.filterTrigger()}*//>
-          <Main /*filterField={this.state.filterField}*//>
+          <Header />
+          <Main />
         </React.Fragment>
         <Footer /> 
       </div>

@@ -10,8 +10,9 @@ h3, p, h1, i {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: center;
   margin-bottom: 40px;
+  align-items: flex-start;
 }
 
 .tarjeta {

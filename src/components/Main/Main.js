@@ -57,7 +57,7 @@ class Main extends Component {
             } 
 
     filtrarPeliculas(textoFiltrar){
-      let PeliculasFiltradas = this.state.originales.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
+      let PeliculasFiltradas = this.state.peliculas.filter((pelicula) => pelicula.title.toLowerCase().includes(textoFiltrar.toLowerCase()));
       console.log(PeliculasFiltradas);
 
       this.setState({
@@ -72,6 +72,10 @@ class Main extends Component {
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
                 < Search filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             </div>
+            {/* { hacer la logica del ternario aca y mostramos un div o otro div  }
+            {this.state. ? 
+            <p>No hay resulrados</p>
+          } */}
             <div className="card-container">
               { 
                 this.state.cargando === false ?

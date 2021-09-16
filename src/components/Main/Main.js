@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import "./Main.css"
 import Article from './Article/Article';
-import Search from '../Header/Search/Search';
+import Header from '../Header/Header';
 
 class Main extends Component {
     constructor(){
@@ -71,13 +71,13 @@ class Main extends Component {
         peliculas: PeliculasFiltradas,
       })
     }        
-
+     
     render(){
       return(
         <main>
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
-                < Search filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
+                < Header filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             </div>
             
             <div className="card-container">

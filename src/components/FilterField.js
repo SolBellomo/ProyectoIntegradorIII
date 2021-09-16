@@ -9,7 +9,7 @@ class FilterField extends Component {
     };
   }
 
-  enviarSubmit(e) {
+  /* enviarSubmit(e) {
     e.preventDefault();
   }
 
@@ -20,10 +20,10 @@ class FilterField extends Component {
       },
       () => this.props.filtrarPeliculas(this.state.filterBy)
     );
-  }
+  } */
   render() {
     return (
-      <form onSubmit={this.enviarSubmit}>
+/*       <form onSubmit={this.enviarSubmit}>
         <label>Filter cards: </label>
         <input
           type="text"
@@ -31,7 +31,7 @@ class FilterField extends Component {
           onChange={(e) => this.controlCambios(e)}
           value={this.state.filterBy}
         />
-      </form>
+      </form> */
     );
   }
 }

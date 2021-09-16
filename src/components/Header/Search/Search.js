@@ -15,7 +15,7 @@ class Search extends Component{
     controlarCambios(event){
         this.serState({valor: event.target.value});
     }
-    enviarSubmit(e) {
+    /* enviarSubmit(e) {
         e.preventDefault();
     }
     
@@ -25,7 +25,7 @@ class Search extends Component{
         },
         () => this.props.filtrarPeliculas(this.state.filterBy)
         );
-    }
+    } */
     render(){
         return (  
             <form onSubmit={(event) => this.evitarSubmit(event)}>

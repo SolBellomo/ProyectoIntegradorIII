@@ -89,3 +89,8 @@ label {
   color: azure;
   margin-left: 20px;
 }
+.resultadosBusqueda{
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 10px;
+}

@@ -82,7 +82,7 @@ class Main extends Component {
             
             <div className="card-container">
             { this.state.peliculas.length == 0 && this.state.cargando === true ? 
-              <p>No se encuentran resultados</p>:
+              <p className="resultadosBusqueda"> No hay datos que coincidan con su búsqueda</p>:
                 this.state.cargando === false ?
                   <img src="https://i.pinimg.com/originals/42/a8/d4/42a8d4625aeb088c45eba5a84ca36325.gif" alt="Cargando..." className="foto"/>:
                 this.state.peliculas.map((pelicula =>(

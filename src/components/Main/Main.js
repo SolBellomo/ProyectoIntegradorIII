@@ -84,7 +84,7 @@ class Main extends Component {
             { this.state.peliculas.length == 0 && this.state.cargando === true ? 
               <p>No se encuentran resultados</p>:
                 this.state.cargando === false ?
-                  <img src="https://i.pinimg.com/originals/42/a8/d4/42a8d4625aeb088c45eba5a84ca36325.gif" alt="Cargando..." />:
+                  <img src="https://i.pinimg.com/originals/42/a8/d4/42a8d4625aeb088c45eba5a84ca36325.gif" alt="Cargando..." className="foto"/>:
                 this.state.peliculas.map((pelicula =>(
                     <Article
                     key={pelicula.id} 

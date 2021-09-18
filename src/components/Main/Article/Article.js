@@ -54,12 +54,7 @@ class Article extends Component {
         return(
            
         <article className="tarjeta">
-            {/* <section className="Header"> 
-                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}></h3>
-                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}></h3>
-            </section> */}
             <section className="navigation">
-                {/* <i classname="delete" className="far fa-window-close"></i> */}
                 <button onClick={()=> this.props.borrar(id)} className="botonBorrar"> <i classname="delete" className="fas fa-times cruz"></i> </button>
                 
             </section>

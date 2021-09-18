@@ -75,9 +75,9 @@ class Main extends Component {
     render(){
       return(
         <main>
+            < Header filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
-                < Header filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
             </div>
             
             <div className="card-container">

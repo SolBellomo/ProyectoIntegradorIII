@@ -12,15 +12,11 @@ header{
     font-weight: 200;
     margin-left: 2%;
 }
-.label{
-    display: none;
-}
 .orden{
     font-size: 25px;
     padding-inline: 5px;
 }
 .infoHeader{
-    width: 550px;
     display: flex;
     flex-basis: 70%;
     align-items: center;

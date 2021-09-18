@@ -1,7 +1,10 @@
-.App{
-  border: solid rgb(102, 102, 102) 2px;  
+html{
   background-color: black;
+}
+.App{
+  border: solid rgb(102, 102, 102) 2px; 
   width: 100%;
+  min-height: 100%;
 }
 
 h3, p, h1, i {

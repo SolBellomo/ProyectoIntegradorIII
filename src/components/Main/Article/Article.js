@@ -26,27 +26,7 @@ class Article extends Component {
         }
     }
 
-    /* display(){
-        if(this.state.display){
-            this.setState({
-                display: flase,
-            })
-        }else{
-            this.setState({
-                display: true,
-            })
-
-        }
-    } */
-    /* borrarPelicula(id){
-        console.log(id);
-        const otras = this.state.pelicula.filter(
-        (pelicula) => pelicula.id != id);
-        this.setState({
-        pelicula: otras,
-              })
-            }
- */
+    
     render(){
         const{poster_path, original_title, overview, release_date, popularity, id} = this.props.datosPelicula;
 

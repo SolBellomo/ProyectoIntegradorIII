@@ -11,6 +11,7 @@ class Main extends Component {
         peliculas: [],
         cargando: false,
         paginado: 1,
+        filas: true,
     };
     }
     componentDidMount(){
@@ -70,12 +71,28 @@ class Main extends Component {
       this.setState({
         peliculas: PeliculasFiltradas,
       })
-    }        
+    }  
+    
+    displayColumnas(){
+      this.setState({
+        filas: false
+      })
+    }
+
+    displayFilas(){
+      this.setState({
+        filas:true
+      })
+    }
      
     render(){
       return(
         <main>
             < Header filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
+            <i className="fas fa-th orden" onClick={()=>this.displayFilas()}></i>
+            <i className="fas fa-align-justify orden" onClick={()=>this.displayColumnas()}></i>
+            <div className={this.state.filas ? 'filas' : 'columnas'}> </div>
+        
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
             </div>

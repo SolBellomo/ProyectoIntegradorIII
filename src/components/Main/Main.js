@@ -73,17 +73,7 @@ class Main extends Component {
       })
     }  
     
-    /* displayColumnas(){
-      this.setState({
-        filas: false
-      })
-    }
-
-    displayFilas(){
-      this.setState({
-        filas: true
-      })
-    } */
+    
      
     render(){
       return(

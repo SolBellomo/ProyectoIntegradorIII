@@ -48,15 +48,15 @@ header{
     border: solid red 10px;
 }
 
-iconos:columnas{
+.columnas{
     background-color: crimson;
-    border: solid red 10px;
+    border: red;
     
-    /* display: none; */
+     display: none; 
 }
-.iconos.filas{
+.filas{
     background-color: blue;
-    border: solid red 10px;
     
-    /* display: block; */
+   
+     display: block; 
 }

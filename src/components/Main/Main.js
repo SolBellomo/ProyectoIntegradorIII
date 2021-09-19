@@ -73,7 +73,7 @@ class Main extends Component {
       })
     }  
     
-    displayColumnas(){
+    /* displayColumnas(){
       this.setState({
         filas: false
       })
@@ -81,17 +81,18 @@ class Main extends Component {
 
     displayFilas(){
       this.setState({
-        filas:true
+        filas: true
       })
-    }
+    } */
      
     render(){
       return(
         <main>
             < Header filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
-            <i className="fas fa-th orden" onClick={()=>this.displayFilas()}></i>
+
+            {/* i className="fas fa-th orden" onClick={()=>this.displayFilas()}></i>
             <i className="fas fa-align-justify orden" onClick={()=>this.displayColumnas()}></i>
-            <div className={this.state.filas ? 'filas' : 'columnas'}> </div>
+            <div className={this.state.filas ? 'filas' : 'columnas'}> </div> */}
         
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>

@@ -34,6 +34,7 @@ header{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 .busqueda{
     height: 40px;
     border: none;
@@ -45,4 +46,17 @@ header{
 }
 .nuevaClase{
     border: solid red 10px;
+}
+
+iconos:columnas{
+    background-color: crimson;
+    border: solid red 10px;
+    
+    /* display: none; */
+}
+.iconos.filas{
+    background-color: blue;
+    border: solid red 10px;
+    
+    /* display: block; */
 }

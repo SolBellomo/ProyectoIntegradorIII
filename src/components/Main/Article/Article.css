@@ -27,3 +27,103 @@
 .cruz{
     color: rgba(114, 114, 114, 0.774);
 }
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-bottom: 40px;
+    align-items: flex-start;
+  }
+  
+  .tarjeta {
+    flex-basis: 18.9%;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    border: solid rgb(102, 102, 102) 2px;
+    min-height: 480px;
+    border-radius: 5px;
+  }
+  .tarjeta:hover{
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(19, 19, 19, 0.575);
+    box-shadow: 0 0 8px rgb(255, 0, 0);
+    
+  }
+  .infoTarjeta{
+    padding-left: 10px;
+    padding-bottom: 5px;
+  }
+  .tituloTarjeta{
+    min-height: 40px;
+  }
+  .navigation{
+    width: 15px;
+    margin-left: 90%;
+  }
+  
+  .fotosCont{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 70%;
+  }
+  .foto {
+    width: 100%;
+  }
+  
+
+  .tarjeta2 {
+    flex-basis: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    border: solid rgb(102, 102, 102) 2px;
+    min-height: 150px;
+    border-radius: 5px;
+  }
+  .tarjeta2:hover{
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(19, 19, 19, 0.575);
+    box-shadow: 0 0 8px rgb(255, 0, 0);
+    
+  }
+  .infoTarjeta2{  
+    padding-left: 10px;
+    padding-bottom: 5px;
+  
+  }
+  .tituloTarjeta2{
+    min-height: 20px;
+    right: 2px;
+    justify-self: flex-start;
+  
+  }
+  .navigation2{
+    width: 5px;
+    margin-left: 90%;
+  }
+  
+  .fotosCont2{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    width: 15%;
+  }
+
+  .more2{
+    color: red;
+   
+
+
+}
+
+.more2:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

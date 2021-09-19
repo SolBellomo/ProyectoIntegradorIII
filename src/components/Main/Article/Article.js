@@ -38,10 +38,12 @@ class Article extends Component {
                 <button onClick={()=> this.props.borrar(id)} className="botonBorrar"> <i classname="delete" className="fas fa-times cruz"></i> </button>
                 
             </section>
-               <main className="infoTarjeta">
+
                     <div className="fotosCont">
                         <img src={'https:///image.tmdb.org/t/p/w500' + poster_path} alt={original_title} className="foto" />
                     </div>
+               <main className="infoTarjeta">
+                   
                     <h3 className="tituloTarjeta">{original_title}</h3>
                     
                     <section className="aditional-info"> 
@@ -50,7 +52,7 @@ class Article extends Component {
                         <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Popularity: {popularity}</h3>
                     </section>
                     
-                    <p className='more' onClick={()=>this.viewMore()}>{this.state.text}</p>
+                    <p className='more2' onClick={()=>this.viewMore()}>{this.state.text}</p>
 
                <main/>
             </main>

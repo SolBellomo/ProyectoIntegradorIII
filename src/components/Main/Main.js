@@ -15,7 +15,7 @@ class Main extends Component {
     };
     }
     componentDidMount(){
-      console.log("component did mount");
+      
       const url= `https://api.themoviedb.org/3/movie/popular?api_key=10fd46606b7b4f788c4f94213141cfc9&language=en-US&page=${this.state.paginado}`
       fetch(url)
       .then( (respuesta) => respuesta.json())
@@ -33,9 +33,7 @@ class Main extends Component {
               .catch( err => console.log(err))
         }
     
-    componentDidUpdate(){
-      console.log("component did update")
-    }
+    
 
     cargarMas(){
       const url = `https://api.themoviedb.org/3/movie/popular?api_key=10fd46606b7b4f788c4f94213141cfc9&language=en-US&page=${this.state.paginado}`;

@@ -33,7 +33,7 @@ class Article extends Component {
     
         return(
             <>
-            {this.props.cardDisplay === false ?
+            {this.props.changeOrder === false ?
         <article className="tarjeta">
             <section className="navigation">
                 <button onClick={()=> this.props.borrar(id)} className="botonBorrar"> <i classname="delete" className="fas fa-times cruz"></i> </button>

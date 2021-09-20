@@ -91,7 +91,7 @@ class Main extends Component {
     render(){
       return(
         <main>
-            < Header cardDisplay= {()=>this.cardDisplay()}  filtrarPeliculas={(param) => this.filtrarPeliculas (param)} />
+            < Header cardDisplay={()=>this.cardDisplay()}  filtrarPeliculas={(param) => this.filtrarPeliculas (param)} />
         
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>

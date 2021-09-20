@@ -30,7 +30,7 @@ class Header extends Component{
                 <header>
                     <h1 className="Titulo">MOVIES</h1>
                     <section className="infoHeader">
-                            <div className="iconos" onClick={()=>this.props.changeOrder()}>
+                            <div className="iconos" onClick={()=>this.props.cardDisplay()}>
                             <i className="fas fa-th orden"></i> 
                             <i className="fas fa-align-justify orden" ></i>
                             </div>

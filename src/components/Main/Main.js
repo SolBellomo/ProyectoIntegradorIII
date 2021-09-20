@@ -11,7 +11,7 @@ class Main extends Component {
         peliculas: [],
         cargando: false,
         paginado: 1,
-        changeOrder: false,
+        cardDisplay: false,
     };
     }
     componentDidMount(){
@@ -75,14 +75,14 @@ class Main extends Component {
     }  
     
      
-    changeOrder() {
-      if(this.state.changeOrder){
+    cardDisplay() {
+      if(this.state.cardDisplay){
         this.setState({
-          changeOrder: false,
+          cardDisplay: false,
         })
       } else {
         this.setState({
-          changeOrder: true,
+          cardDisplay: true,
         })            
       }
     }
@@ -93,7 +93,7 @@ class Main extends Component {
     render(){
       return(
         <main>
-            < Header changeOrder= {()=>this.changeOrder()} changeButton= {this.state.changeOrder} filtrarPeliculas={(param) => this.filtrarPeliculas (param)} />
+            < Header cardDisplay= {()=>this.cardDisplay()}  filtrarPeliculas={(param) => this.filtrarPeliculas (param)} />
         
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
@@ -109,7 +109,7 @@ class Main extends Component {
                     key={pelicula.id} 
                     datosPelicula={pelicula} 
                     borrar={ (peliculaBorrar) =>this.borrarPelicula(peliculaBorrar)}
-                    changeOrder= {this.state.changeOrder}/> 
+                    cardDisplay= {this.state.cardDisplay}/> 
                 )))
                 }
             </div>

@@ -48,9 +48,9 @@ class Article extends Component {
                     <h3 className="tituloTarjeta">{original_title}</h3>
                     
                     <section className="aditional-info"> 
-                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>{overview}</h3>
-                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Release date: {release_date}</h3>
-                        <h3 className={`extra ${this.state.viewMore ? 'show' : 'hide'}`}>Popularity: {popularity}</h3>
+                        <h3 className={`aditional ${this.state.viewMore ? 'show' : 'hide'}`}>{overview}</h3>
+                        <h3 className={`aditional ${this.state.viewMore ? 'show' : 'hide'}`}>Release date: {release_date}</h3>
+                        <h3 className={`aditional ${this.state.viewMore ? 'show' : 'hide'}`}>Popularity: {popularity}</h3>
                     </section>
                     
                     <p className='more' onClick={()=>this.viewMore()}>{this.state.text}</p>

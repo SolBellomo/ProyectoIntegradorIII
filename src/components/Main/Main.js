@@ -11,7 +11,7 @@ class Main extends Component {
         peliculas: [],
         cargando: false,
         paginado: 1,
-        filas: true,
+        changeOrder: false,
     };
     }
     componentDidMount(){
@@ -36,6 +36,7 @@ class Main extends Component {
     componentDidUpdate(){
       console.log("component did update")
     }
+
     cargarMas(){
       const url = `https://api.themoviedb.org/3/movie/popular?api_key=10fd46606b7b4f788c4f94213141cfc9&language=en-US&page=${this.state.paginado}`;
         console.log(url)
@@ -73,16 +74,26 @@ class Main extends Component {
       })
     }  
     
-    
+     
+    changeOrder() {
+      if(this.state.changeOrder){
+        this.setState({
+          changeOrder: false,
+        })
+      } else {
+        this.setState({
+          changeOrder: true,
+        })            
+      }
+    }
+  
+
+   
      
     render(){
       return(
         <main>
-            < Header filtrarPeliculas={(param) => this.filtrarPeliculas (param)}/>
-
-            {/* i className="fas fa-th orden" onClick={()=>this.displayFilas()}></i>
-            <i className="fas fa-align-justify orden" onClick={()=>this.displayColumnas()}></i>
-            <div className={this.state.filas ? 'filas' : 'columnas'}> </div> */}
+            < Header changeOrder= {()=>this.changeOrder()} changeButton= {this.state.changeOrder} filtrarPeliculas={(param) => this.filtrarPeliculas (param)} />
         
             <div className="button">
                 <button className="cargarMas" type="button" onClick={() => this.cargarMas()}>Cargar más tarjetas</button>
@@ -97,7 +108,8 @@ class Main extends Component {
                     <Article
                     key={pelicula.id} 
                     datosPelicula={pelicula} 
-                    borrar={ (peliculaBorrar) =>this.borrarPelicula(peliculaBorrar)}/> 
+                    borrar={ (peliculaBorrar) =>this.borrarPelicula(peliculaBorrar)}
+                    changeOrder= {this.state.changeOrder}/> 
                 )))
                 }
             </div>

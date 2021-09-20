@@ -60,3 +60,15 @@ header{
    
      display: block; 
 }
+
+.iconos {
+    
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.iconos:hover {
+    border-color: rgb(255, 0, 0);
+    background-color: rgba(19, 19, 19, 0.575);
+    box-shadow: 0 0 8px rgb(255, 0, 0);
+}

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Article from '../Main/Article/Article';
 import "./Header.css"
+
 
 class Header extends Component{
     constructor(props){
@@ -8,7 +8,6 @@ class Header extends Component{
         this.state = {
             valor: "",
             filterBy: "",
-            
           };
     }
     enviarSubmit(e) {
@@ -23,30 +22,17 @@ class Header extends Component{
         () => this.props.filtrarPeliculas(this.state.filterBy)
       );
     }
-    displayColumnas(){
-      this.setState({
-        filas: false
-      })
-    }
 
-    displayFilas(){
-      this.setState({
-        filas: true
-      })
-    }
+
 
     render(){
         return (  
                 <header>
                     <h1 className="Titulo">MOVIES</h1>
                     <section className="infoHeader">
-                            <div className="iconos">
-                            <i className="fas fa-th orden" onClick={()=>this.displayFilas()}></i>
-                            <i className="fas fa-align-justify orden" onClick={()=>this.displayColumnas()}></i>
-                              <div className={this.state.filas ? 'filas' : 'columnas'}> 
-                              
-                               </div>
-        
+                            <div className="iconos" onClick={()=>this.props.changeOrder()}>
+                            <i className="fas fa-th orden"></i> 
+                            <i className="fas fa-align-justify orden" ></i>
                             </div>
                             <form onSubmit={(event) => this.evitarSubmit(event)}>
                                 <input type="Search" className="busqueda" name="name" onChange={(e) => this.controlCambios(e)} value={this.state.filterBy} placeholder="Filter cards..."/>
